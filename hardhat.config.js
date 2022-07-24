@@ -13,19 +13,22 @@ require("dotenv").config()
 const MAINNET_RPC_URL =
     process.env.MAINNET_RPC_URL ||
     process.env.ALCHEMY_MAINNET_RPC_URL ||
-    "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+    "https://eth-mainnet.alchemyapi.io/v2/Bg2AMfOUKfryFinevfQxYs7fW8swpp8g"
 const RINKEBY_RPC_URL =
-    process.env.RINKEBY_RPC_URL || "https://eth-rinkeby.alchemyapi.io/v2/your-api-key"
-const KOVAN_RPC_URL =
-    process.env.KOVAN_RPC_URL || "https://eth-kovan.alchemyapi.io/v2/your-api-key"
+    process.env.RINKEBY_RPC_URL || "https://alchemy.infura.io/v3/Bg2AMfOUKfryFinevfQxYs7fW8swpp8g"
+//const KOVAN_RPC_URL =
+//    process.env.KOVAN_RPC_URL || "https://eth-kovan.alchemyapi.io/v2/your-api-key"
+
 const POLYGON_MAINNET_RPC_URL =
-    process.env.POLYGON_MAINNET_RPC_URL || "https://polygon-mainnet.alchemyapi.io/v2/your-api-key"
-const PRIVATE_KEY = process.env.PRIVATE_KEY || "0x"
+    process.env.POLYGON_MAINNET_RPC_URL ||
+    "https://polygon-mainnet.alchemyapi.io/v2/Bg2AMfOUKfryFinevfQxYs7fW8swpp8g"
+const PRIVATE_KEY =
+    process.env.PRIVATE_KEY || "274de8f87ea8c30553ff402eb1125a7ab035461af08ff6f3efacf00f3ef28ad9"
 // optional
-const MNEMONIC = process.env.MNEMONIC || "your mnemonic"
+//const MNEMONIC = process.env.MNEMONIC || "your mnemonic"
 
 // Your API key for Etherscan, obtain one at https://etherscan.io/
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "Your etherscan API key"
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "NUR6GGVYCF442NI9RBTV91M92C4JIFZM4M"
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || "Your polygonscan API key"
 const REPORT_GAS = process.env.REPORT_GAS || false
 
@@ -42,15 +45,15 @@ module.exports = {
         localhost: {
             chainId: 31337,
         },
-        kovan: {
-            url: KOVAN_RPC_URL,
-            accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-            //accounts: {
-            //     mnemonic: MNEMONIC,
-            // },
-            saveDeployments: true,
-            chainId: 42,
-        },
+        //kovan: {
+        // url: KOVAN_RPC_URL,
+        //accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+        //accounts: {
+        //     mnemonic: MNEMONIC,
+        // },
+        //saveDeployments: true,
+        //chainId: 42,
+        //},
         rinkeby: {
             url: RINKEBY_RPC_URL,
             accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],

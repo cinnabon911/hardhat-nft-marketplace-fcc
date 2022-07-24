@@ -1,6 +1,6 @@
 const { ethers, network } = require("hardhat")
 const { moveBlocks } = require("../utils/move-blocks")
-
+gaslimit: "100000000000000"
 const TOKEN_ID = 1
 
 async function buyItem() {
